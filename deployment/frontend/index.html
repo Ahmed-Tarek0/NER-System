@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Named Entity Reader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <svg class="mark" width="24" height="32" viewBox="0 0 24 32" aria-hidden="true">
+        <path d="M17 2H10a7 7 0 000 14h7V2Z" fill="currentColor"/>
+        <rect x="10" y="2" width="3" height="14" fill="var(--paper)"/>
+        <rect x="14.5" y="2" width="3" height="28" fill="currentColor"/>
+      </svg>
+      <div>
+        <h1>Named Entity Reader</h1>
+        <p class="subtitle">Paste a sentence to see which words name a person, a place, an organization, or something else.</p>
+      </div>
+    </header>
+
+    <section class="input-block">
+      <textarea id="input-text" rows="2" placeholder="Type or paste a sentence…"></textarea>
+      <div class="controls">
+        <button id="analyze-btn" class="btn-primary" disabled>Analyze</button>
+        <button id="clear-btn" class="btn-ghost">Clear</button>
+        <button id="try-btn" class="btn-ghost" type="button">Try an example</button>
+        <span id="status" role="status"></span>
+      </div>
+    </section>
+
+    <section class="reading-block">
+      <div id="output" class="reading"></div>
+    </section>
+
+    <footer class="legend" aria-label="Entity types">
+      <span class="legend-item" style="--c: var(--per)">Person</span>
+      <span class="legend-item" style="--c: var(--org)">Organization</span>
+      <span class="legend-item" style="--c: var(--loc)">Location</span>
+      <span class="legend-item" style="--c: var(--misc)">Misc</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
